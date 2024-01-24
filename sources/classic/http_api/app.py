@@ -1,7 +1,7 @@
 import falcon.media
 
 from classic.components import component
-from classic.app.errors import AppError, ErrorsList
+from classic.error_handling import Error, ErrorsList
 
 from pydantic import ValidationError
 
@@ -18,7 +18,7 @@ class App(falcon.App):
     
         self.req_options.auto_parse_qs_csv = True
 
-        self.add_error_handler(AppError, error_handlers.app_error)
+        self.add_error_handler(Error, error_handlers.app_error)
         self.add_error_handler(ErrorsList, error_handlers.app_errors_list)
         self.add_error_handler(ValidationError, error_handlers.validation_error)
 

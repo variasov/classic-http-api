@@ -2,12 +2,12 @@ from falcon import testing
 import pytest
 
 from classic.http_api import App
-from classic.app import AppError, ErrorsList
+from classic.error_handling import Error, ErrorsList
 from pydantic import BaseModel
 
 
-class SomeError(AppError):
-    msg_template = 'Some error'
+class SomeError(Error):
+    message_template = 'Some error'
     code = 'app.some_error'
 
 
