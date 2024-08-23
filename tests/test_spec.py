@@ -1,15 +1,3 @@
-# Classic HTTP Api
-
-Этот пакет содержит вариант HTTP API, совместимый с принципами Ioc и DI.
-Является оберткой над фреймворком
-[Falcon](https://falcon.readthedocs.io/en/stable/index.html), 
-позволяющей описывать входные и выходные параметр входных точек с помощью
-[msgspec][https://jcristharif.com/msgspec/index.html], и предстоявлящей 
-интеграцию с OpenAPI и Swagger.
-
-Пример:
-
-```python
 from falcon import Request, Response
 from classic.components import component
 from classic.http_api import App, specification
@@ -63,5 +51,3 @@ if __name__ == '__main__':
     # 
     with make_server('', 8000, app) as httpd:
         httpd.serve_forever()
-
-```
