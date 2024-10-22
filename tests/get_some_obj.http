@@ -1,4 +1,4 @@
-GET http://localhost:8000/api/melts
+GET http://localhost:8000/api/some_obj?number=3
 
 
 ###

@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/some_obj HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+{
+  "some_attr": 3
+}
