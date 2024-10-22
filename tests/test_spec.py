@@ -28,8 +28,8 @@ class SomeObjResource:
         response.media = [
             SomeObj(number)
             for number in range(
-                # Объект запроса содержится в контексте под именем media.
-                request.context.media.number,
+                # Объект запроса содержится в контексте под именем query.
+                request.context.query.number,
             )
         ]
 
